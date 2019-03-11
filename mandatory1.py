@@ -123,6 +123,7 @@ for c in requiredReadingListSplit:
 
 
 # step 6
+#Pushing to my own github account
 os.chdir('..')
 subprocess.run(['git', 'pull', 'https://github.com/mikk5394/PythonMandatory1.git', 'master'])
 subprocess.run(['git', 'init'])
