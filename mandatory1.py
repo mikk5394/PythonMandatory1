@@ -119,7 +119,7 @@ requiredReadingListSplit.sort()
 for c in requiredReadingListSplit:
     pensum.write(c)
 
-subprocess.run(['open', 'required_reading.md'])
+#subprocess.run(['open', 'required_reading.md'])
 
 
 # step 6
@@ -131,4 +131,4 @@ commit = input('Enter commit:')
 subprocess.run(['git', 'commit', '-am', commit])
 subprocess.run(['git', 'remote', 'add', 'origin', 'https://github.com/mikk5394/PythonMandatory1.git'])
 subprocess.run(['git', 'remote', '-v'])
-subprocess.run(['git', 'push', '--set-upstream', 'origin', 'master'])
+subprocess.run(['git', 'push', 'origin', 'master'])
