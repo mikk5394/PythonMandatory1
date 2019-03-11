@@ -124,7 +124,7 @@ subprocess.run(['open', 'required_reading.md'])
 
 # step 6
 os.chdir('..')
-subprocess.run(['git', 'pull', '--rebase', 'https://github.com/mikk5394/PythonMandatory1.git', 'master'])
+subprocess.run(['git', 'pull', 'https://github.com/mikk5394/PythonMandatory1.git', 'master'])
 subprocess.run(['git', 'init'])
 subprocess.run(['git', 'add', '--all'])
 commit = input('Enter commit:')
