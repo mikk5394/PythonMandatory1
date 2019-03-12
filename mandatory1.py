@@ -5,7 +5,8 @@ import glob
 from urllib.request import urlopen
 from urllib.error import HTTPError
 
-#Step 1
+#Step 1 
+# try catch
 #Collects everything from the API and saves it in a html variable
 api = urlopen('https://api.github.com/orgs/python-elective-1-spring-2019/repos?per_page=100')
 #Converts it to a String so we can work with it
@@ -58,7 +59,7 @@ for n in urlList:
 
 readMeList = []
 #Uses glob to try and get a readme file in every directory if there is any - note the star
-for readMe in glob.glob('/Users/mikkel/Desktop/Python/Mandatory/ClonedRepos/*/readme.md'):
+for readMe in glob.glob('/Users/mikkel/Desktop/Python/Mandatory/ClonedRepos/*x$/readme.md'):
     readmefile = open(readMe).read()
     readMeList.append(readmefile)
 
@@ -72,7 +73,7 @@ for c in readMeList:
     index = c.find('## Required reading')
     #Checks for a required reading paragrahp inside every readme file - not every file has one
     if index != -1:
-        required = c[index+19:c.find('##', index+19)]
+        required = c[index+19:c.find('##', index+1)]
         requiredReadingList.append(required)
       
 
